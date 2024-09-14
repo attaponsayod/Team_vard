@@ -1,0 +1,4 @@
+sources:
+  - name: job_ads
+    tables:
+      - name: stage_data_ads
