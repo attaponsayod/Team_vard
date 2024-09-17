@@ -164,3 +164,5 @@ cython_debug/
 setup_user.sql
 
 secrets.toml
+
+jobsearch.py

@@ -4,6 +4,13 @@ import json
 from pathlib import Path
 import os
 
+
+os.environ['JOBSEARCH__DESTINATION__SNOWFLAKE__CREDENTIALS__DATABASE'] = 'job_ads'
+os.environ['JOBSEARCH__DESTINATION__SNOWFLAKE__CREDENTIALS__USERNAME'] = 'attaponsayod2'
+os.environ['JOBSEARCH__DESTINATION__SNOWFLAKE__CREDENTIALS__PASSWORD'] = 'Snowflake1337!'
+os.environ['JOBSEARCH__DESTINATION__SNOWFLAKE__CREDENTIALS__HOST'] = 'xi57324.west-europe.azure'
+
+
 def _get_ads(url_for_search, params):
     headers = {"accept": "application/json"}
     response = requests.get(url_for_search, headers=headers, params=params)
