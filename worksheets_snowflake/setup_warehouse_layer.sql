@@ -33,7 +33,11 @@ USE ROLE job_ads_dbt_role;
 
 USE WAREHOUSE dev_wh;
 
+
 SELECT * FROM job_ads.staging.data_field_job_ads LIMIT 10;
+
+SHOW GRANTS ON SCHEMA job_ads.staging;
+
 
 SHOW GRANTS ON SCHEMA job_ads.warehouse;
 
