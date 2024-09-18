@@ -32,4 +32,3 @@ SHOW GRANTS TO ROLE job_ads_dlt_role;
 
 SHOW GRANTS TO USER extract_loader;
 
-GRANT ROLE job_ads_dlt_role TO USER ATTAPONSAYOD2;
