@@ -4,8 +4,8 @@ from connect_data_warehouse import query_job_listings
 def layout():
     df = query_job_listings()
 
-    st.title("Data engineering job ads")
-    st.write("This dashboard shows data engineering job ads from arbetsförmedlingen API")
+    st.title("Health care job ads")
+    st.write("This dashboard shows health care job ads from arbetsförmedlingen API")
 
     st.markdown("## Vacancies ")
     cols = st.columns(3)
