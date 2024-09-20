@@ -1,4 +1,74 @@
 models:
+
+  - name: dim_job_details
+    description: "Details about the job ad"
+    columns:
+      - name: job_details_id
+        data_tests:
+          - not_null
+          - unique
+
+      - name: headline
+        data_tests:
+          - not_null
+
+      - name: description
+      - data_tests:
+          - not_null
+
+      - name: description_html_formatted
+      - data_tests:
+          - not_null
+
+      - name: duration
+      - data_tests:
+          - not_null
+
+      - name: salary_type
+      - data_tests:
+          - not_null
+
+      - name: scope_of_work_min
+      - data_tests:
+          - not_null
+
+      - name: scope_of_work_max
+      - data_tests:
+          - not_null
+
+  - name: dim_workplace
+    description: workplace Information
+    columns: 
+      - name: workplace_id
+        data_tests:
+          - not_null
+          - unique
+      
+      - name: workplace_name
+        data_tests:
+          - not_null
+     
+      - name: employer_workplace
+        data_tests:
+          - not_null
+      
+      - name: workplace_street_address
+        data_tests:
+          - not_null
+ 
+      - name: workplace_region 
+        data_tests:
+          - not_null
+      
+      - name: city
+        data_tests:
+          - not_null
+      
+      - name: country
+        data_tests:
+          - not_null
+
+      
   - name: dim_employer
     description: "Information about the employer such as name, workplace address, organisation number, ..."
     columns:
@@ -8,20 +78,27 @@ models:
           - unique
           - not_null
 
-      - name: workplace_city
+      - name: workplace_id
+        description: "Foreign key to workplace table"
+        data_tests:
+          - relationships:
+              to: ref('dim_workplace')
+              field: workplace_id
+          - not_null
+
+      - name: first_name
         data_tests:
           - not_null
 
-        # TODO: add more tests ...
-
-  - name: dim_job_details
-    description: "Details about the job ad"
-    columns:
-      - name: job_details_id
+      - name: sur_name
         data_tests:
           - not_null
-          - unique
-      - name: headline
+
+      - name: date_of_birth
+        data_tests:
+          - not_null
+        
+      - name: gender
         data_tests:
           - not_null
 
@@ -35,6 +112,13 @@ models:
           - relationships:
               to: ref('dim_job_details')
               field: job_details_id
+
+      - name: employer_id
+        data_tests:
+          - relationships:
+              to: ref('dim_employer')
+              field: employer_id
+              
       - name: relevance
         data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
