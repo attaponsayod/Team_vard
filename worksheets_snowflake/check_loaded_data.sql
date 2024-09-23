@@ -13,5 +13,4 @@ SELECT
     employer__workplace
 FROM staging.data_field_job_ads;
 
-
 SELECT * FROM staging.data_field_job_ads;
