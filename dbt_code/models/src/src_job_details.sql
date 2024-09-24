@@ -10,5 +10,7 @@ SELECT
     duration__label AS duration,
     salary_type__label AS salary_type,
     scope_of_work__min AS scope_of_work_min,
-    scope_of_work__min AS scope_of_work_max
+    scope_of_work__min AS scope_of_work_max,
+    WORKING_HOURS_TYPE__LEGACY_AMS_TAXONOMY_ID AS working_hours_type
+
 FROM stg_job_ads 

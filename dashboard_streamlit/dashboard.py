@@ -77,7 +77,6 @@ def layout():
                  )["DESCRIPTION_HTML_FORMATTED"].values[0],
                  unsafe_allow_html=True,
     )
-    
 
     st.markdown("## Job listings data")
     st.dataframe(df)

@@ -21,4 +21,4 @@ def query_job_listings(query = 'SELECT * FROM mart_job_listings'):
         return df
 
 
-# print(query_job_listings())
+print(query_job_listings())

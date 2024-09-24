@@ -10,5 +10,7 @@ SELECT
     duration,
     salary_type,
     scope_of_work_min,
-    scope_of_work_max
+    scope_of_work_max,
+    working_hours_type
+
 FROM src_job_details
