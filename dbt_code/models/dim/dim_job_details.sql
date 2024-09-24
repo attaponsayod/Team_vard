@@ -11,6 +11,10 @@ SELECT
     salary_type,
     scope_of_work_min,
     scope_of_work_max,
-    working_hours_type
+        CASE
+        WHEN working_hours_type = 1 THEN 'förmiddags skift'
+        WHEN working_hours_type = 2 THEN 'eftermiddags skift'
+        ELSE 'ej specificerad'
+    END AS working_hours_type
 
 FROM src_job_details
