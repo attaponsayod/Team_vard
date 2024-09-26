@@ -15,6 +15,10 @@ SELECT
         WHEN working_hours_type = 1 THEN 'förmiddags skift'
         WHEN working_hours_type = 2 THEN 'eftermiddags skift'
         ELSE 'ej specificerad'
-    END AS working_hours_type
+    END AS working_hours_type,
+    driving_license,
+    access_to_car
+
+
 
 FROM src_job_details

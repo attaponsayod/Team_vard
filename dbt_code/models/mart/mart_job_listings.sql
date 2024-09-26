@@ -21,9 +21,11 @@ SELECT
     jd.scope_of_work_min,
     jd.scope_of_work_max,
     jd.working_hours_type,
+    jd.driving_license,
+    jd.access_to_car,
 
     f.application_deadline
-    
+
 FROM fct_job_ads AS f
 LEFT JOIN job_details AS jd
     ON f.job_details_key = jd.job_details_id
