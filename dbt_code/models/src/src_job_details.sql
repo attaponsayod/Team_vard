@@ -6,6 +6,7 @@ SELECT
     headline,
     description__text AS "DESCRIPTION",
     description__text_formatted AS description_html_formatted,
+    DESCRIPTION__CONDITIONS AS description_conditions,
     employment_type__label AS employment_type,
     duration__label AS duration,
     salary_type__label AS salary_type,

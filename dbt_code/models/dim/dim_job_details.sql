@@ -6,6 +6,7 @@ SELECT
     headline,
     description,
     description_html_formatted,
+    description_conditions,
     employment_type,
     duration,
     salary_type,

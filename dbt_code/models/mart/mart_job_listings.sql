@@ -17,6 +17,7 @@ SELECT
     e.workplace_city,
     jd.description,
     jd.description_html_formatted,  
+    jd.description_conditions,
     jd.duration,
     jd.scope_of_work_min,
     jd.scope_of_work_max,
