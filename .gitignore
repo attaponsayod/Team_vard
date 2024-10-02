@@ -162,3 +162,7 @@ cython_debug/
 #.idea/
 
 setup_user.sql
+
+secrets.toml
+
+jobsearch.py
