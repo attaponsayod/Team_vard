@@ -7,3 +7,7 @@ CREATE USER IF NOT EXISTS reporter
     DEFAULT_NAMESPACE = 'job_ads.marts'
     COMMENT = 'reporter user for making analysis and BI'
     DEFAULT_ROLE = 'job_ads_reporter_role';
+
+SHOW USERS LIKE 'reporter';
+
+DESCRIBE USER reporter;
